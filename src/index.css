@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .main-container {
+    @apply w-screen h-screen min-w-[320px] min-h-[568px] max-w-[1440px] max-h-[1080px] my-0 mx-auto bg-red-400
+  }
+}
