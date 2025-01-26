@@ -4,7 +4,7 @@ import Logo from './Logo/Logo'
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center px-2 py-1 outline-double">
+    <header className="flex justify-between items-center px-2 py-2 drop-shadow-md doraemon-color">
       <Logo />
       <TechnologiesActivator />
     </header>

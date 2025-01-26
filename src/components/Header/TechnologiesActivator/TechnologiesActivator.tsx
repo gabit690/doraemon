@@ -5,12 +5,15 @@ import { logosConfig } from './technologies-logos'
 import Cable from './Cable/Cable'
 import useAppStatus from '@/stores/app.store'
 import { AppStatus } from '@/types/app-status'
+import { BasicTechnology } from '@/types/technologies'
 
 const TechnologiesActivator = () => {
   const currentStatus = useAppStatus(state => state.status)
   const changeStatus = useAppStatus(state => state.changeStatus)
+  const isCableActive = useAppStatus(state => state.isCableActive)
+  const isButtonActive = useAppStatus(state => state.isButtonActive)
 
-  const togglerTechnology = {
+  const togglerTechnology: Record<BasicTechnology, VoidFunction> = {
     html: (): void => {
       if (currentStatus !== AppStatus.Structure) {
         changeStatus(AppStatus.Structure)
@@ -37,22 +40,14 @@ const TechnologiesActivator = () => {
     },
   }
 
-  const isCableActive = (index: number): boolean => {
-    if (index === 0) {
-      return currentStatus !== AppStatus.Structure
-    } else {
-      return currentStatus === AppStatus.Dynamic
-    }
-  }
-
   return (
     <div className="flex items-center min-w-40">
-      {logosConfig.map(({ technology, src, alt, backgroundColor }, index) => (
-        <React.Fragment key={backgroundColor}>
+      {logosConfig.map(({ technology, src, alt }, index) => (
+        <React.Fragment key={technology}>
           <ArcadeButton
+            isActive={isButtonActive(technology)}
             imgSrc={src}
             imgAlt={alt}
-            hexColor={backgroundColor}
             onHandleClick={togglerTechnology[technology]}
           />
           {index < 2 && <Cable isActive={isCableActive(index)} />}

@@ -6,4 +6,8 @@
   .main-container {
     @apply w-screen h-screen min-w-[320px] min-h-[568px] max-w-[1440px] max-h-[1080px] my-0 mx-auto bg-red-400
   }
+
+  .doraemon-color {
+    background-color: #51a1c4;
+  }
 }
