@@ -1,5 +1,6 @@
-import Logo from './Logo/Logo'
 import TechnologiesActivator from './TechnologiesActivator/TechnologiesActivator'
+
+import Logo from './Logo/Logo'
 
 const Header = () => {
   return (
