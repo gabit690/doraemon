@@ -4,10 +4,19 @@
 
 @layer components {
   .main-container {
-    @apply w-screen h-screen min-w-[320px] min-h-[568px] max-w-[1440px] max-h-[1080px] my-0 mx-auto bg-red-400
+    @apply w-screen h-screen min-w-[320px] min-h-[568px] max-w-[1440px] max-h-[1080px] my-0 mx-auto bg-black
   }
 
   .doraemon-color {
     background-color: #51a1c4;
+  }
+
+  .top-shadow {
+    filter: drop-shadow(0 -8px 3px rgb(255 255 255 / 0.07)) drop-shadow(0 -4px 2px rgb(255 255 255 / 0.06))
+  }
+
+  /* TODO: delete temporal styles */
+  .temporal-image {
+    @apply absolute grayscale top-0 left-1/2 -translate-x-1/2
   }
 }
