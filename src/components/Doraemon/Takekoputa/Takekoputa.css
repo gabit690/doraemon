@@ -1,0 +1,12 @@
+@keyframes spin {
+  from {
+      transform: rotateX(70deg) rotateZ(0deg);
+  }
+  to {
+      transform: rotateX(70deg) rotateZ(360deg);
+  }
+}
+.animate-spin-slow {
+  animation: spin .25s linear infinite;
+  transform-origin: 40px 3px;
+}
