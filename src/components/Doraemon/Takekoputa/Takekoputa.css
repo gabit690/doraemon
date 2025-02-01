@@ -1,3 +1,7 @@
+.takekoputa-style {
+  @apply stroke-black fill-yellow-500
+}
+
 @keyframes spin {
   from {
       transform: rotateX(70deg) rotateZ(0deg);
