@@ -2,7 +2,7 @@ import './Takekoputa.css'
 
 const Takekoputa = () => {
   return (
-    <div className="outline-dotted outline-red-600 w-20 h-14 mx-auto">
+    <div className="w-20 h-14 mx-auto">
       <svg width="100%" height="100%" className="overflow-visible">
         <path
           d="M 39 5 a 1 2 0 0 1 2 0 l 2 40 h -6 z"

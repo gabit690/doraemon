@@ -1,15 +1,11 @@
-import head from '../../../../temp/doraemon-head-copy.jpg'
-import Bell from './Bell/Bell'
 import Eyes from './Eyes/Eyes'
 import Mouth from './Mouth/Mouth'
-import Necklace from './Necklace/Necklace'
 import Nose from './Nose/Nose'
 import Whiskers from './Whiskers/Whiskers'
 
 const Head = () => {
   return (
-    <div className="w-80 h-60 outline-double outline-blue-800 mx-auto relative">
-      <img src={head} alt="head" className="opacity-10 temporal-image h-60" />
+    <div className="w-80 h-60 mx-auto relative">
       <svg width="320" height="240" className="overflow-visible">
         <ellipse
           cx="160"
@@ -33,8 +29,6 @@ const Head = () => {
           className="stroke-black stroke-[2]"
         />
         <Mouth />
-        <Necklace />
-        <Bell />
       </svg>
     </div>
   )

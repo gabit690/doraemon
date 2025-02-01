@@ -14,9 +14,4 @@
   .top-shadow {
     filter: drop-shadow(0 -8px 3px rgb(255 255 255 / 0.07)) drop-shadow(0 -4px 2px rgb(255 255 255 / 0.06))
   }
-
-  /* TODO: delete temporal styles */
-  .temporal-image {
-    @apply absolute grayscale top-0 left-1/2 -translate-x-1/2
-  }
 }
