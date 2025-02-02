@@ -1,6 +1,10 @@
+import useAppStatus from '@/stores/app.store'
 import './Takekoputa.css'
+import { AppStatus } from '@/types/app-status'
 
 const Takekoputa = () => {
+  const appStatus = useAppStatus(state => state.status)
+
   return (
     <div className="w-20 h-14 mx-auto">
       <svg width="100%" height="100%" className="overflow-visible">
@@ -8,8 +12,10 @@ const Takekoputa = () => {
           d="M 39 5 a 1 2 0 0 1 2 0 l 2 40 h -6 z"
           className="takekoputa-style"
         />
-        // TODO fix g classname to active animation
-        <g className=".animate-spin-slow">
+
+        <g
+          className={`${appStatus === AppStatus.Dynamic ? 'animate-spin-slow' : 'takekoputa-inactive'}`}
+        >
           <polyline
             points="0, 0 0, 8 40, 5 80, 8 80, 0 40, 1 0, 0"
             className="takekoputa-style"

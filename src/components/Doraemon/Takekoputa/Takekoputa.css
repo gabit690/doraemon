@@ -1,3 +1,7 @@
+.takekoputa-inactive {
+  transform: rotateX(70deg);
+}
+
 .takekoputa-style {
   @apply stroke-black stroke-[2] fill-yellow-500
 }
