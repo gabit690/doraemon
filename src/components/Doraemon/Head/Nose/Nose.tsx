@@ -1,14 +1,17 @@
+import useAppStatus from '@/stores/app.store'
 import { useId } from 'react'
+import { getTailwindClasses } from './styles'
 
 const Nose = () => {
   const noseId: string = useId()
+  const appStatus = useAppStatus(store => store.status)
   return (
     <g id={`${noseId}-nose`}>
       <circle
         cx="160"
         cy="81"
         r="16"
-        className="stroke-black stroke-[2] fill-red-600"
+        className={getTailwindClasses(appStatus)}
       />
 
       <circle

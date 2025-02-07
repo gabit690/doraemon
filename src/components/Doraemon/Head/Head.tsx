@@ -1,9 +1,12 @@
+import useAppStatus from '@/stores/app.store'
 import Eyes from './Eyes/Eyes'
 import Mouth from './Mouth/Mouth'
 import Nose from './Nose/Nose'
+import { getTailwindClasses } from './styles'
 import Whiskers from './Whiskers/Whiskers'
 
 const Head = () => {
+  const appStatus = useAppStatus(store => store.status)
   return (
     <div className="w-80 h-60 mx-auto relative">
       <svg width="320" height="240" className="overflow-visible">
@@ -12,7 +15,7 @@ const Head = () => {
           cy="125"
           rx="128"
           ry="124"
-          className="stroke-black stroke-[4] fill-blue-500"
+          className={getTailwindClasses(appStatus)}
         />
         <path
           d="M 160 42 c 180 0 125 202 0 202 c -125 0 -180 -202 0 -202"
@@ -20,7 +23,7 @@ const Head = () => {
         />
         <Eyes />
         <Nose />
-        <Whiskers />
+
         <line
           x1="160"
           y1="98"
@@ -29,6 +32,7 @@ const Head = () => {
           className="stroke-black stroke-[2]"
         />
         <Mouth />
+        <Whiskers />
       </svg>
     </div>
   )

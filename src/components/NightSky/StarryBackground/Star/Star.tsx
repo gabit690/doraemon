@@ -1,16 +1,18 @@
+import { getTailwindClasses } from './styles'
 import './Star.css'
 
 type StarProps = {
   left: number
   top: number
   size: number
+  active: boolean
   animationDuration: number
 }
 
-const Star = ({ left, top, size, animationDuration }: StarProps) => {
+const Star = ({ left, top, size, active, animationDuration }: StarProps) => {
   return (
     <div
-      className={`absolute bg-white rounded-full animate-[twinkle_3s_infinite_ease-in-out,moveStar_60s_linear_infinite]`}
+      className={getTailwindClasses(active)}
       style={{
         left: `${left}px`,
         top: `${top}px`,

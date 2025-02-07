@@ -2,10 +2,6 @@
   transform: rotateX(70deg);
 }
 
-.takekoputa-style {
-  @apply stroke-black stroke-[2] fill-yellow-500
-}
-
 @keyframes spin {
   from {
       transform: rotateX(70deg) rotateZ(0deg);

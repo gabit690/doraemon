@@ -1,12 +1,13 @@
 import useAppStatus from '@/stores/app.store'
+import { isStructure } from '@/helpers/checkStatus'
 import StarryBackground from './StarryBackground/StarryBackground'
-import { AppStatus } from '@/types/app-status'
+import { getTailwindClasses } from './styles'
 
 const NightSky = () => {
-  const appStatus = useAppStatus(state => state.status)
+  const appStatus = useAppStatus(store => store.status)
   return (
-    <div className="fixed -z-10 main-container bg-black">
-      {appStatus === AppStatus.Dynamic && <StarryBackground />}
+    <div className={getTailwindClasses(appStatus)}>
+      {!isStructure(appStatus) && <StarryBackground />}
     </div>
   )
 }
