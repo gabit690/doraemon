@@ -7,12 +7,16 @@ Dibujo del personaje [Doraemon][character-info] hecho por diversión.
 - [Vite][vite-web]
 - [React][react-web]
 - [Typescript][ts-web]
+- [Tailwind][tw-web]
+- [Zustand][zt-web]
 
 ## Resultado
 
-El proyecto se encuentra activo en https://gabit690.github.io/doraemon.
+El proyecto se encuentra en https://gabit690.github.io/doraemon.
 
 [character-info]: https://es.wikipedia.org/wiki/Doraemon
 [vite-web]: https://vite.dev
 [react-web]: https://react.dev
 [ts-web]: https://www.typescriptlang.org
+[tw-web]: https://tailwindcss.com
+[zt-web]: https://zustand-demo.pmnd.rs
