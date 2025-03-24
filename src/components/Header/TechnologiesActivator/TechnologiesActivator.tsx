@@ -18,7 +18,9 @@ const TechnologiesActivator = () => {
       if (currentStatus !== AppStatus.Structure) {
         changeStatus(AppStatus.Structure)
       } else {
-        alert('Desactivo HTML. \nSe eliminara todo el contenido de la página.')
+        alert(
+          '"Desactivo HTML". \nSe eliminara todo el contenido de la página.'
+        )
         const root = document.getElementById('root')
         if (!root) return
         root.innerHTML = ''
@@ -45,6 +47,7 @@ const TechnologiesActivator = () => {
       {logosConfig.map(({ technology, src, alt }, index) => (
         <React.Fragment key={technology}>
           <ArcadeButton
+            name={technology}
             isActive={isButtonActive(technology)}
             imgSrc={src}
             imgAlt={alt}

@@ -1,6 +1,8 @@
 import './ArcadeButton.css'
+import { BasicTechnology } from '@/types/technologies'
 
 type ArcadeButtonProps = {
+  name: BasicTechnology
   isActive: boolean
   imgSrc: string
   imgAlt: string
@@ -8,13 +10,17 @@ type ArcadeButtonProps = {
 }
 
 const ArcadeButton = ({
+  name,
   isActive,
   imgSrc,
   imgAlt,
   onHandleClick,
 }: ArcadeButtonProps) => {
   return (
-    <div className={`arcade-border ${isActive ? 'bg-green-300' : 'bg-white'}`}>
+    <div
+      className={`arcade-border ${isActive ? 'bg-green-300' : 'bg-white'}`}
+      title={name}
+    >
       <button
         onClick={onHandleClick}
         className={`w-8 h-8 arcade-border m-1 cursor-pointer overflow-hidden shadow-md shadow-black/60 transition-all duration-200 ease-in-out active:shadow-inner active:scale-95`}
